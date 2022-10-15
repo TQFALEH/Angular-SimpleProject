@@ -1,0 +1,27 @@
+<div class="container ">
+    <div class="row p-5">
+        <h1 class="text-center text-light" style="font-weight: 900;" >OUR MENU </h1>
+        <div class="row row-cols-1 row-cols-md-3 g-5 " >
+            <div *ngFor="let i of menu" class="col " id="card">
+                <div class="card shadow-lg " style="border: none;" >
+                    <img [src]="i.img" class="card-img-top" alt="...">
+                    <div class="card-body  text-light" style="background-color:#ab3235 ;">
+                        <h5 class="card-title">{{i.name}}</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to</p>
+                            <p class="badge mx-3 rounded-pill text-bg-warning">$ {{i.price}}</p>
+                            <p class="badge rounded-pill text-bg-warning">{{i.caloris}} kcal</p>
+                            </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <style>
+        #card{
+            transition: ease-in-out 0.5s;
+        }
+        #card:hover{
+            z-index: 22;
+            transform: scale(1.1);
+        }
+    </style>
